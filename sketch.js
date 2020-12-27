@@ -44,15 +44,10 @@ function setup() {
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
 	World.add(world, ground);
 	 
-	BottomBox = new Box (width/2, 650, 200, 20);
-	World.add(world,BottomBox);
-
-	LeftBox = new Box (300, 650, 200, 20);
-	World.add(world, LeftBox);
-
-	RightBox = new Box (500, 700, 200, 20);
-	World.add(world, RightBox);
-
+	BottomBox = new Box (400, 650, 200, PI);
+	LeftBox = new Box (300, 650, 200, PI/2);
+	RightBox = new Box (500, 700, 200, PI);
+	
 
 	Engine.run(engine);
   
