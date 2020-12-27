@@ -1,13 +1,14 @@
 class Box {
-    constructor(x, y, width, height) {
+    constructor(x, y, height, angle) {
         var Box_options = {
             'restitution' : 0,
             isStatic : true,
         }
 
-        this.body = Bodies.rectangle(x, y, width, height, Box_options);
-        this.width = width;
+        this.body = Bodies.rectangle(x, y, height, Box_options);
+        this.width = 20;
         this.height = height;
+        this.angle = angle;
 
         World.add(world, this.body);
     }
@@ -17,7 +18,7 @@ class Box {
     var pos = this.body.position;
     var angle = this.body.angle;
 
-    Push();
+    push();
     translate(pos.x, pos.y)
     rotate(angle);
 
@@ -26,7 +27,7 @@ class Box {
     stroke("red");
     rect (0, 0, this.width, this.height);
    
-    Pop();
+    pop();
     }
 
     }
